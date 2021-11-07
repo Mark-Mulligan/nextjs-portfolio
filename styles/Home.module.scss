@@ -1,5 +1,10 @@
 @import './Variables.scss';
 
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .heroSection {
   min-height: 100vh;
   padding-top: 50px;
@@ -45,7 +50,8 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 70px;
+  margin-bottom: 40px;
   padding-left: 95px;
 
   .quoteText {
@@ -63,5 +69,55 @@
     width: 30px;
     border: 2px solid $darker-blue;
     display: inline-block;
+  }
+}
+
+.nameContainer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0;
+
+  h1 {
+    margin: 0;
+    font-size: 160px;
+    font-weight: 900;
+    padding: 0;
+  }
+
+  .lastName {
+    position: relative;
+    top: -52px;
+    color: $lighter-blue;
+  }
+}
+
+.aboutSection {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 95px;
+  padding-right: 95px;
+  min-height: 50vh;
+}
+
+.aboutNavigator {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    width: 100%;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $lighter-blue;
+    border-bottom: 1px solid $darker-blue;
+    cursor: pointer;
+  }
+
+  .selected {
+    color: white;
+    border-bottom: 1px solid white;
   }
 }

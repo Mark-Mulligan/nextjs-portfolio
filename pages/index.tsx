@@ -55,6 +55,29 @@ const Home: NextPage = () => {
             <p className={styles.quoteAuthor}>Charles Mingus</p>
             <hr />
           </div>
+
+          <div className={styles.nameContainer}>
+            <h1 className={styles.firstName}>Mark</h1>
+            <h1 className={styles.lastName}>Mulligan</h1>
+          </div>
+        </section>
+
+        <section className={styles.aboutSection}>
+          <h2>Web Developer</h2>
+          <ul className={styles.aboutNavigator}>
+            <li className={styles.selected}>
+              <span>Skills</span>
+            </li>
+            <li>
+              <span>Experience</span>
+            </li>
+            <li>
+              <span>About</span>
+            </li>
+            <li>
+              <span>Social</span>
+            </li>
+          </ul>
         </section>
       </main>
     </div>
