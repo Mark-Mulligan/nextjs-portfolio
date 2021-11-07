@@ -1,0 +1,67 @@
+@import './Variables.scss';
+
+.heroSection {
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pageLinks {
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    margin-right: 35px;
+    font-size: 1.2rem;
+
+    a {
+      padding: 10px;
+    }
+  }
+}
+
+.navSocialLinks {
+  display: flex;
+  align-items: center;
+
+  li {
+    margin-left: 20px;
+  }
+}
+
+.quoteContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  padding-left: 95px;
+
+  .quoteText {
+    color: $lighter-blue;
+    line-height: 1.4;
+    font-size: 1.3rem;
+    max-width: 445px;
+  }
+
+  .quoteAuthor {
+    margin-bottom: 5px;
+  }
+
+  hr {
+    width: 30px;
+    border: 2px solid $darker-blue;
+    display: inline-block;
+  }
+}
