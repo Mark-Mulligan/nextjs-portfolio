@@ -10,15 +10,16 @@ const AboutSection = ({ aboutItems }: AboutSectionProps) => {
   const [selectedSection, setSelectedSection] = useState('Skills');
   const [carouselPosition, setCarouselPosition] = useState('0%');
 
-  const handleSectionClick = (selectedItem: string) => {
+  const handleSectionClick = (selectedItem: string, position: string) => {
     setSelectedSection(selectedItem);
+    setCarouselPosition(position);
   };
 
   return (
     <section className={styles.aboutSection}>
       <h2>Web Developer</h2>
       <ul className={styles.aboutNavigator}>
-        {aboutItems.map((item) => {
+        {aboutItems.map((item, index) => {
           if (item === selectedSection) {
             return (
               <li key={item} className={styles.selected}>
@@ -27,7 +28,7 @@ const AboutSection = ({ aboutItems }: AboutSectionProps) => {
             );
           } else {
             return (
-              <li key={item} onClick={() => handleSectionClick(item)}>
+              <li key={item} onClick={() => handleSectionClick(item, `${index === 0 ? '0' : `-${index}00%`}`)}>
                 <span>{item}</span>
               </li>
             );
@@ -36,7 +37,7 @@ const AboutSection = ({ aboutItems }: AboutSectionProps) => {
       </ul>
 
       <div className={styles.carouselWrapper}>
-        <div className={styles.carousel}>
+        <div className={styles.carousel} style={{ left: carouselPosition }}>
           <section className={styles.skillsSection}>
             <div className={styles.leftCol}>
               <Image height={125} width={125} src="/icons/html-icon.png" alt="htmlIcon" />
@@ -126,7 +127,7 @@ const AboutSection = ({ aboutItems }: AboutSectionProps) => {
           </section>
           <section className={styles.experienceSection}>
             <div className={styles.leftCol}>
-              <h4>Full Stack Devloper</h4>
+              <h4>Full Stack Developer</h4>
             </div>
             <div className={styles.rightCol}>
               <h6>Visual Storage Intelligence</h6>
@@ -137,6 +138,18 @@ const AboutSection = ({ aboutItems }: AboutSectionProps) => {
                   enterprise storage analytics
                 </li>
                 <li>Developed two factor authentication system for the application</li>
+              </ul>
+            </div>
+            <div className={styles.leftCol}>
+              <h4>Freelance Developer</h4>
+            </div>
+            <div className={styles.rightCol}>
+              <h6>Mulligan Designs</h6>
+              <p>2019 - Present</p>
+              <ul>
+                <li>Worked with different school districts to update and maintain their websites</li>
+                <li>Built custom applications for clients to assist with business operations</li>
+                <li>Provided design input for UI/UX layouts and marketing concepts</li>
               </ul>
             </div>
           </section>
