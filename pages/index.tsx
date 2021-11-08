@@ -3,6 +3,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import styles from '../styles/Home.module.scss';
+import AboutSection from '../components/AboutSection';
+
+const aboutSectionItems = ['Skills', 'Experience', 'About', 'Social'];
 
 const Home: NextPage = () => {
   return (
@@ -62,23 +65,7 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className={styles.aboutSection}>
-          <h2>Web Developer</h2>
-          <ul className={styles.aboutNavigator}>
-            <li className={styles.selected}>
-              <span>Skills</span>
-            </li>
-            <li>
-              <span>Experience</span>
-            </li>
-            <li>
-              <span>About</span>
-            </li>
-            <li>
-              <span>Social</span>
-            </li>
-          </ul>
-        </section>
+        <AboutSection aboutItems={aboutSectionItems} />
       </main>
     </div>
   );
