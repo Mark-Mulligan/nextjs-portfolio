@@ -66,7 +66,10 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <AboutSection aboutItems={aboutSectionItems} />
+        <div className={styles.aboutBackground}>
+          <AboutSection aboutItems={aboutSectionItems} />
+        </div>
+
         <ProjectSection />
       </main>
     </div>
