@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import styles from '../styles/Home.module.scss';
 import AboutSection from '../components/AboutSection';
+import ProjectSection from '../components/ProjectSection';
 
 const aboutSectionItems = ['Skills', 'Experience', 'About', 'Social'];
 
@@ -66,6 +67,7 @@ const Home: NextPage = () => {
         </section>
 
         <AboutSection aboutItems={aboutSectionItems} />
+        <ProjectSection />
       </main>
     </div>
   );
