@@ -5,7 +5,7 @@
   margin: auto;
   padding-left: 95px;
   padding-right: 95px;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .aboutNavigator {
@@ -36,109 +36,11 @@
 }
 
 .carousel {
-  width: 200%;
+  width: 400%;
   display: flex;
   position: relative;
 
   section {
     width: 100%;
-    margin-bottom: 200px;
-  }
-}
-
-.skillsSection {
-  display: grid;
-  grid-template-columns: 25% 75%;
-
-  .leftCol {
-    margin-top: 2rem;
-    text-align: right;
-    margin-bottom: 2rem;
-  }
-
-  .rightCol {
-    margin-top: 2rem;
-    padding-left: 11%;
-    padding-right: 11%;
-    margin-bottom: 2rem;
-  }
-
-  .frontendCol {
-    padding-top: 22px;
-  }
-
-  h4 {
-    font-size: 2.2rem;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  ul {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-
-  .skillLabel {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  .divider {
-    height: 100%;
-    border-left: 1px solid white;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
-
-.experienceSection {
-  display: grid;
-  grid-template-columns: 25% 75%;
-
-  h4 {
-    color: $gold;
-    font-size: 2.2rem;
-    margin-top: 0;
-  }
-
-  h6 {
-    margin-top: 5px;
-    font-size: 1.6rem;
-    margin-bottom: 5px;
-  }
-
-  p {
-    color: $lighter-blue;
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-style: italic;
-  }
-
-  ul {
-    list-style: disc;
-    padding-left: 25px;
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
-
-  .leftCol {
-    margin-top: 2rem;
-    text-align: right;
-    margin-bottom: 2rem;
-  }
-
-  .rightCol {
-    margin-top: 2rem;
-    padding-left: 11%;
-    padding-right: 11%;
-    margin-bottom: 2rem;
   }
 }

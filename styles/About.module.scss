@@ -1,0 +1,24 @@
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-column-gap: 50px;
+}
+
+.profilePicture {
+  border-radius: 5px;
+}
+
+.leftCol {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.rightCol {
+  margin-top: 2rem;
+
+  p {
+    margin-top: 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+}
