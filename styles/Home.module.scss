@@ -78,16 +78,18 @@
   max-width: 1200px;
   margin: auto;
   padding: 0;
+  position: relative;
 
   h1 {
     margin: 0;
     font-size: 160px;
     font-weight: 900;
     padding: 0;
+    position: relative;
+    z-index: 1;
   }
 
   .lastName {
-    position: relative;
     top: -52px;
     color: $lighter-blue;
   }
