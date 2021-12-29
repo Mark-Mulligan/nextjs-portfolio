@@ -13,7 +13,7 @@ const ProjectSection = () => {
               <div className={styles.projectInfo}>
                 <h3>Better Music</h3>
                 <p>Front End - UI</p>
-                <button>Launch Project</button>
+                <a href="#">Launch Project</a>
               </div>
             </div>
           </div>
@@ -25,7 +25,18 @@ const ProjectSection = () => {
               <div className={styles.projectInfo}>
                 <h3>Outdoor Adventures</h3>
                 <p>Full Stack - React, Redux, Node.js, MySQL</p>
-                <button>Launch Project</button>
+
+                <a href="#">
+                  <span>Launch Project</span>
+                  <span className={styles.linkArrow}>
+                    <Image
+                      src="/icons/white-right-arrow.png"
+                      alt="link to project page in another tab"
+                      height={15}
+                      width={15}
+                    />
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -35,7 +46,7 @@ const ProjectSection = () => {
               <div className={styles.projectInfo}>
                 <h3>Invoice Generator</h3>
                 <p>Full Stack - React, Node.js, MongoDB</p>
-                <button>Launch Project</button>
+                <a href="#">Launch Project</a>
               </div>
             </div>
           </div>
