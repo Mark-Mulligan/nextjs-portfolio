@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useHover = () => {
+export const useHover = () => {
   const [value, setValue] = useState(false);
 
-  const ref = useRef(null);
+  const ref = useRef<null | HTMLElement>(null);
   const handleMouseOver = () => setValue(true);
   const handleMouseOut = () => setValue(false);
 
@@ -20,7 +20,7 @@ const useHover = () => {
         };
       }
     },
-    [ref.current], // Recall only if ref changes
+    [], // Recall only if ref changes
   );
   return [ref, value];
 };
