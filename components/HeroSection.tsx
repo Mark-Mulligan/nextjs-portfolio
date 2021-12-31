@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.scss';
+import styles from '../styles/HeroSection.module.scss';
 import Image from 'next/image';
 
 const HeroSection = () => {
