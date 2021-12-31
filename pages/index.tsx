@@ -61,6 +61,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className={styles.nameContainer}>
+            <div className={styles.shape}></div>
             <h1 className={styles.firstName}>Mark</h1>
             <h1 className={styles.lastName}>Mulligan</h1>
           </div>
