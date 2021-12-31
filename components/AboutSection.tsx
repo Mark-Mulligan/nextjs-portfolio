@@ -20,7 +20,7 @@ const AboutSection = ({ aboutItems }: AboutSectionProps) => {
   };
 
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <h2>Web Developer</h2>
       <ul className={styles.aboutNavigator}>
         {aboutItems.map((item, index) => {
