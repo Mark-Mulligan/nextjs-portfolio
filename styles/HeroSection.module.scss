@@ -18,7 +18,7 @@
     width: 100%;
   }
 
-  .flex {
+  .navbarLogo {
     display: flex;
     align-items: flex-start;
   }
@@ -49,9 +49,6 @@
 }
 
 .quoteContainer {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 70px;
   margin-bottom: 40px;
 
@@ -112,5 +109,61 @@
 @media (max-width: 900px) {
   .heroSection {
     padding-top: 25px;
+    min-height: 50vh;
+  }
+
+  .nameContainer {
+    h1 {
+      font-size: 130px;
+    }
+
+    .lastName {
+      top: -42px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    ul {
+      display: block;
+      text-align: center;
+    }
+
+    .navbarLogo {
+      display: none;
+    }
+
+    .pageLinks {
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .socialLinks {
+      justify-content: center;
+    }
+  }
+
+  .quoteContainer {
+    margin-top: 20px;
+
+    .quoteText {
+      display: inline-block;
+    }
+  }
+
+  .nameContainer {
+    h1 {
+      font-size: 100px;
+    }
+
+    .lastName {
+      top: -32px;
+    }
   }
 }
