@@ -25,7 +25,7 @@
     margin-top: 2px;
   }
 
-  a {
+  button {
     display: inline-block;
     background: rgba(255, 255, 255, 0.25);
     color: $primary-color;
@@ -44,7 +44,7 @@
     }
   }
 
-  a:hover {
+  button:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.9);
     color: black;
