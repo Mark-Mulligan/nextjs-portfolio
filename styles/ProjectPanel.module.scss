@@ -1,5 +1,27 @@
+@import './Variables.scss';
+
 .projectPanel {
   position: relative;
   height: 400px;
   width: 100%;
+}
+
+.descriptionBackground {
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+  width: 50%;
+  background: rgba(80, 80, 80, 0.9);
+  color: $primary-color;
+}
+
+.topRightPanel {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+  right: 0;
+}
+
+.bottomRightPanel {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+  right: 0;
 }
