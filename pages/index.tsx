@@ -4,6 +4,7 @@ import Head from 'next/head';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import ProjectSection from '../components/ProjectSection';
+import ContactSection from '../components/ContactSection';
 
 const aboutSectionItems = ['Skills', 'Experience', 'About', 'Social'];
 
@@ -21,6 +22,10 @@ const Home: NextPage = () => {
         <AboutSection aboutItems={aboutSectionItems} />
         <ProjectSection />
       </main>
+
+      <footer>
+        <ContactSection />
+      </footer>
     </div>
   );
 };

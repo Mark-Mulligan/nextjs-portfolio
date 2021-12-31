@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import styles from '../styles/AboutSection.module.scss';
 import Experience from './Experience';
 import Skills from './Skills';
