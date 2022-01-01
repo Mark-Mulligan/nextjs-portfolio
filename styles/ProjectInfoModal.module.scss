@@ -1,3 +1,5 @@
+@import './Variables.scss';
+
 .modalBackground {
   height: 100vh;
   width: 100%;
@@ -16,7 +18,74 @@
 }
 
 .modal {
-  height: 500px;
   width: 500px;
   background: grey;
+  border-radius: 5px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding: 15px;
+
+  .modalTitle {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .close {
+    font-size: 2rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: none;
+    background: none;
+    color: white;
+  }
+
+  .close:hover {
+    cursor: pointer;
+    color: black;
+  }
+}
+
+.modalBody {
+  padding: 15px;
+
+  h6 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+}
+
+.modalFooter {
+  border-top: 1px solid white;
+  padding: 15px;
+}
+
+.linkBtn {
+  display: inline-block;
+  border: 1px solid $dark-blue-font;
+  border-radius: 4px;
+  padding: 9px 15px;
+  background: none;
+  color: $dark-blue-font;
+  font-size: 1rem;
+}
+
+.linkBtn:hover {
+  cursor: pointer;
+  background: $dark-blue-font;
+  color: $primary-color;
+}
+
+.mr10 {
+  margin-right: 10px;
 }
