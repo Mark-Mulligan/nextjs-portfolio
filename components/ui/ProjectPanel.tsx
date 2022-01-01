@@ -1,4 +1,5 @@
 import styles from '../../styles/ProjectPanel.module.scss';
+import { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 
 interface ProjectPanelProps {
@@ -7,9 +8,21 @@ interface ProjectPanelProps {
   imageSrc: string;
   imageAlt: string;
   panelType: string;
+  setShowProjectModal: Dispatch<SetStateAction<boolean>>;
 }
 
-const ProjectPanel = ({ projectTitle, description, imageSrc, imageAlt, panelType }: ProjectPanelProps) => {
+const ProjectPanel = ({
+  projectTitle,
+  description,
+  imageSrc,
+  imageAlt,
+  panelType,
+  setShowProjectModal,
+}: ProjectPanelProps) => {
+  const handleMoreInfoClick = () => {
+    setShowProjectModal(true);
+  };
+
   return (
     <div className={styles.projectPanel}>
       <Image src={imageSrc} alt={imageAlt} layout="fill" objectFit="cover" />
@@ -18,7 +31,7 @@ const ProjectPanel = ({ projectTitle, description, imageSrc, imageAlt, panelType
           <div className={styles.projectInfo}>
             <h3>{projectTitle}</h3>
             <p>{description}</p>
-            <button>More Info</button>
+            <button onClick={handleMoreInfoClick}>More Info</button>
           </div>
         </div>
       </div>
