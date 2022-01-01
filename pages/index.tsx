@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 import Head from 'next/head';
 
 import HeroSection from '../components/HeroSection';
@@ -9,6 +10,14 @@ import ContactSection from '../components/ContactSection';
 const aboutSectionItems = ['Skills', 'Experience', 'About', 'Social'];
 
 const Home: NextPage = () => {
+  const [visableAboutSection, setVisableAboutSection] = useState('Skills'); // determines which section is highlighted in the about section toggle
+  const [carouselPosition, setCarouselPosition] = useState('0%'); // determines which sub-section is displayed on the about section
+
+  const handleAboutSectionToggle = (selectedItem: string, position: string) => {
+    setVisableAboutSection(selectedItem);
+    setCarouselPosition(position);
+  };
+
   return (
     <div className="container">
       <Head>
@@ -18,8 +27,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <HeroSection />
-        <AboutSection aboutItems={aboutSectionItems} />
+        <HeroSection handleAboutSectionToggle={handleAboutSectionToggle} />
+        <AboutSection
+          aboutItems={aboutSectionItems}
+          visableAboutSection={visableAboutSection}
+          carouselPosition={carouselPosition}
+          handleAboutSectionToggle={handleAboutSectionToggle}
+        />
         <ProjectSection />
       </main>
 

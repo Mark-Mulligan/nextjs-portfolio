@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from '../styles/AboutSection.module.scss';
 import Experience from './Experience';
 import Skills from './Skills';
@@ -7,23 +6,23 @@ import Social from './Social';
 
 interface AboutSectionProps {
   aboutItems: string[];
+  visableAboutSection: string;
+  carouselPosition: string;
+  handleAboutSectionToggle: (selectedItem: string, position: string) => void;
 }
 
-const AboutSection = ({ aboutItems }: AboutSectionProps) => {
-  const [selectedSection, setSelectedSection] = useState('Skills');
-  const [carouselPosition, setCarouselPosition] = useState('0%');
-
-  const handleSectionClick = (selectedItem: string, position: string) => {
-    setSelectedSection(selectedItem);
-    setCarouselPosition(position);
-  };
-
+const AboutSection = ({
+  aboutItems,
+  visableAboutSection,
+  carouselPosition,
+  handleAboutSectionToggle,
+}: AboutSectionProps) => {
   return (
     <section id="about" className={styles.aboutSection}>
       <h2>Web Developer</h2>
       <ul className={styles.aboutNavigator}>
         {aboutItems.map((item, index) => {
-          if (item === selectedSection) {
+          if (item === visableAboutSection) {
             return (
               <li key={item} className={styles.selected}>
                 <span>{item}</span>
@@ -31,7 +30,7 @@ const AboutSection = ({ aboutItems }: AboutSectionProps) => {
             );
           } else {
             return (
-              <li key={item} onClick={() => handleSectionClick(item, `${index === 0 ? '0' : `-${index}00%`}`)}>
+              <li key={item} onClick={() => handleAboutSectionToggle(item, `${index === 0 ? '0' : `-${index}00%`}`)}>
                 <span>{item}</span>
               </li>
             );

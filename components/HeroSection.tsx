@@ -1,7 +1,11 @@
 import styles from '../styles/HeroSection.module.scss';
 import Image from 'next/image';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  handleAboutSectionToggle: (selectedItem: string, position: string) => void;
+}
+
+const HeroSection = ({ handleAboutSectionToggle }: HeroSectionProps) => {
   return (
     <section className={styles.heroSection}>
       <nav className={styles.navbar}>
@@ -16,10 +20,14 @@ const HeroSection = () => {
                 <a href="#projects">Projects</a>
               </li>
               <li>
-                <a href="#about">Skills</a>
+                <a href="#about" onClick={() => handleAboutSectionToggle('Skills', '0')}>
+                  Skills
+                </a>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a href="#about" onClick={() => handleAboutSectionToggle('About', '-200%')}>
+                  About
+                </a>
               </li>
               <li>
                 <a href="#contact">Contact</a>
