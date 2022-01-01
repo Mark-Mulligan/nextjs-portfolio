@@ -1,93 +1,62 @@
 import Image from 'next/image';
 import styles from '../styles/Skills.module.scss';
 
+const FrontEndSkills = [
+  'Javascript',
+  'React.js',
+  'Typescript',
+  'Redux',
+  'Next.js',
+  'Sass',
+  'Css',
+  'Bootstrap',
+  'Material UI',
+  'Styled Components',
+];
+
+const BackEndSkills = ['Node.js', 'Phython', 'Socket.io', 'MSSQL', 'MongoDB', 'Azure', 'REST APIS', 'GraphQL'];
+
 const Skills = () => {
+  const renderSkills = (skillsArr: string[]) => {
+    return (
+      <ul>
+        {skillsArr.map((skill) => {
+          return (
+            <li key={skill}>
+              <span className={styles.skillLabel}>{skill}</span>
+              <span className={styles.divider} />
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
+
   return (
     <section className={styles.skillsSection}>
-      <div className={styles.leftCol}>
-        <Image height={125} width={125} src="/icons/html-icon.png" alt="htmlIcon" />
-      </div>
-      <div className={`${styles.rightCol} ${styles.frontendCol}`}>
-        <h4>Front End</h4>
-        <ul>
-          <li>
-            <span className={styles.skillLabel}>React.js</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Redux</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Next.js</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Typescript</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Sass</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Bootstrap</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Material UI</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>CSS Modules</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Styled Components</span>
-            <span className={styles.divider} />
-          </li>
-        </ul>
-      </div>
-      <div className={styles.leftCol}>
-        <Image src="/icons/node-icon.svg" alt="node.js logo" height={125} width={125} />
+      <div className={styles.row}>
+        <div className={styles.leftCol}>
+          <div className={styles.skillLogo}>
+            <Image layout="fill" objectFit="contain" src="/icons/html-icon.png" alt="htmlIcon" />
+          </div>
+        </div>
+        <div className={`${styles.rightCol} ${styles.frontendCol}`}>
+          <h4>Front End</h4>
+          {renderSkills(FrontEndSkills)}
+        </div>
       </div>
 
-      <div className={styles.rightCol}>
-        <h4>Backend</h4>
-        <ul>
-          <li>
-            <span className={styles.skillLabel}>Node.js</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Python</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Socket.io</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>MSSQL</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>MongoDB</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>Azure</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>REST APIS</span>
-            <span className={styles.divider} />
-          </li>
-          <li>
-            <span className={styles.skillLabel}>GraphQL</span>
-            <span className={styles.divider} />
-          </li>
-        </ul>
+      <div className={styles.row}>
+        <div className={styles.leftCol}>
+          <div className={styles.skillLogo}>
+            <Image src="/icons/node-icon.svg" alt="node.js logo" layout="fill" objectFit="contain" />
+          </div>
+        </div>
+
+        <div className={styles.rightCol}>
+          <h4>Backend</h4>
+          {renderSkills(BackEndSkills)}
+        </div>
       </div>
     </section>
   );

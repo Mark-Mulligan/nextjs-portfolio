@@ -1,8 +1,10 @@
 @import './Variables.scss';
 
 .experienceSection {
-  display: grid;
-  grid-template-columns: 25% 75%;
+  .row {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
 
   h4 {
     color: $gold;
@@ -35,13 +37,23 @@
   .leftCol {
     margin-top: 2rem;
     text-align: right;
-    margin-bottom: 2rem;
   }
 
   .rightCol {
     margin-top: 2rem;
     padding-left: 11%;
     padding-right: 11%;
-    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .experienceSection {
+    h4 {
+      font-size: 1.8rem;
+    }
+
+    h6 {
+      font-size: 1.4rem;
+    }
   }
 }
