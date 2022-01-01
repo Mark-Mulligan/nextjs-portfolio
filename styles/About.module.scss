@@ -18,7 +18,28 @@
 
   p {
     margin-top: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.5;
+  }
+}
+
+@media (max-width: 750px) {
+  .leftCol {
+    width: 240px;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rightCol {
+    display: inline-block;
+  }
+
+  .about {
+    display: block;
+
+    p {
+      font-size: 1rem;
+    }
   }
 }

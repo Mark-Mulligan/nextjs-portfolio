@@ -7,28 +7,28 @@ const Social = () => {
       <div>
         <div className={styles.socialWrapper}>
           <a href="https://www.linkedin.com/in/mark-mulligan-50/" target="_blank" rel="noreferrer">
-            <Image height={100} width={100} src="/icons/linkedin.svg" alt="linkedin link" />
+            <Image layout="fill" objectFit="contain" src="/icons/linkedin.svg" alt="linkedin link" />
           </a>
         </div>
       </div>
       <div>
         <div className={styles.socialWrapper}>
           <a href="https://github.com/Mark-Mulligan" target="_blank" rel="noreferrer">
-            <Image height={100} width={100} src="/icons/githubWhite.svg" alt="github link" />
+            <Image layout="fill" objectFit="contain" src="/icons/githubWhite.svg" alt="github link" />
           </a>
         </div>
       </div>
       <div>
         <div className={styles.socialWrapper}>
           <a>
-            <Image height={100} width={100} src="/icons/facebook.svg" alt="facebook link" />
+            <Image layout="fill" objectFit="contain" src="/icons/facebook.svg" alt="facebook link" />
           </a>
         </div>
       </div>
       <div>
         <div className={styles.socialWrapper}>
           <a>
-            <Image height={100} width={100} src="/icons/instagram.svg" alt="instagram link" />
+            <Image layout="fill" objectFit="contain" src="/icons/instagram.svg" alt="instagram link" />
           </a>
         </div>
       </div>
