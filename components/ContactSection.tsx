@@ -1,9 +1,13 @@
 import styles from '../styles/ContactSection.module.scss';
 import Image from 'next/image';
 
-const ContactSection = () => {
+interface ContactSectionProps {
+  handleAboutSectionToggle: (selectedItem: string, position: string) => void;
+}
+
+const ContactSection = ({ handleAboutSectionToggle }: ContactSectionProps) => {
   return (
-    <section className={styles.contactSection}>
+    <section id="contact" className={styles.contactSection}>
       <div className={styles.wrapper}>
         <ul>
           <div className={styles.pageLinks}>
@@ -14,10 +18,14 @@ const ContactSection = () => {
               <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="#about">Skills</a>
+              <a href="#about" onClick={() => handleAboutSectionToggle('Skills', '0')}>
+                Skills
+              </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" onClick={() => handleAboutSectionToggle('About', '-200%')}>
+                About
+              </a>
             </li>
           </div>
           <div className={styles.socialLinks}>

@@ -38,7 +38,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer>
-        <ContactSection />
+        <ContactSection handleAboutSectionToggle={handleAboutSectionToggle} />
       </footer>
     </div>
   );
