@@ -122,4 +122,10 @@
   .descriptionBackground {
     width: 88%;
   }
+
+  .projectPanel {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+  }
 }
