@@ -31,22 +31,22 @@ const ContactSection = ({ handleAboutSectionToggle }: ContactSectionProps) => {
           <div className={styles.socialLinks}>
             <li className={styles.mr}>
               <a href="https://github.com/Mark-Mulligan" target="_blank" rel="noreferrer">
-                <Image height={50} width={50} src="/icons/githubWhite.svg" alt="github link" />
+                <i className="fab fa-github fa-2x"></i>
               </a>
             </li>
             <li className={styles.mr}>
               <a href="https://www.linkedin.com/in/mark-mulligan-50/" target="_blank" rel="noreferrer">
-                <Image height={45} width={45} src="/icons/linkedin.svg" alt="Linkedin Link" />
+                <i className="fab fa-linkedin fa-2x"></i>
               </a>
             </li>
             <li className={styles.mr}>
               <a href="https://www.facebook.com/mark.mulligan.5264" target="_blank" rel="noreferrer">
-                <Image height={45} width={45} src="/icons/facebook.svg" alt="facebook link" />
+                <i className="fab fa-facebook-square fa-2x"></i>
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/mark_mulligan1" target="_blank" rel="noreferrer">
-                <Image height={45} width={45} src="/icons/instagram.svg" alt="instagram link" />
+                <i className="fab fa-instagram fa-2x"></i>
               </a>
             </li>
           </div>
