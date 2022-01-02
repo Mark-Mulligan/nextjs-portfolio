@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from '../styles/ProjectSection.module.scss';
 import ProjectInfoModal from './ui/ProjectInfoModal';
 import ProjectPanel from './ui/ProjectPanel';
@@ -13,28 +12,54 @@ const projectInfo = [
     liveLink: 'https://bettermusic.netlify.app',
     githubLink: 'https://github.com/Mark-Mulligan/better-music',
   },
+  {
+    title: 'Outdoor Adventures',
+    description:
+      'I am an active person and always enjoyed spending time outdoors. I designed this application to help search through and find detailed information on all the national parks in the United States. While building this project, I was able to incorporate a lot of different programming concepts that I wanted to explore. This project features server side pagination, redux state management and using library styled components to handle all css styling and complying. It is a fully stack application that is completly responsive.',
+    builtWith:
+      'Redux (using Redux Toolkit), Styled Components, React.js, Node.js, MySQL, Bootstrap, React Google Maps, National Parks API',
+    liveLink: 'https://outdoor-adventures1.netlify.app',
+    githubLink: 'https://github.com/Mark-Mulligan/outdoor-adventures-frontend-v1.0',
+  },
+  {
+    title: 'Invoice Generator',
+    description:
+      'I built this application for one of my friends who is a private music teacher. He spends a lot of time putting together invoices for the parents of the students he teachers each month. This program is designed to streamline that process. I also included a way to save and organize a roster of students. This data is present to the user in the form of table to can be easily searched and sorted. I used google oauth to login in the users, mongoDB to store all the nessary data, and the react-pdf package to create and generate professional invoices that can be downloaded and used as needed.',
+    builtWith: 'React.js, Node.js, MongoDB, Bootstrap, React-PDF',
+    videoLink: 'https://youtu.be/ofsShzbOSEA',
+    githubLink: 'https://github.com/Mark-Mulligan/invoice-gen',
+  },
 ];
 
 const ProjectSection = () => {
   const [showProjectModal, setShowProjectModal] = useState(false);
+  const [projectSelectedIndex, setProjectSelectedIndex] = useState(0);
 
-  const handleProjectClick = () => {
-    console.log('button clicked');
+  const handleProjectClick = (projectIndex: number) => {
+    setProjectSelectedIndex(projectIndex);
     setShowProjectModal(true);
+  };
+
+  const closeProjectModal = () => {
+    setShowProjectModal(false);
   };
 
   return (
     <section className={styles.projectSection}>
       <div>
         <h2 id="projects">Projects</h2>
-        <ProjectInfoModal showModal={showProjectModal} />
+        <ProjectInfoModal
+          showModal={showProjectModal}
+          closeProjectModal={closeProjectModal}
+          projectInfo={projectInfo[projectSelectedIndex]}
+        />
         <ProjectPanel
           imageSrc="/images/betterMusic.jpg"
           imageAlt="Dr. Beat headphones with dark background."
           projectTitle="Better Music"
           description="Front End - UI"
           panelType="topRightPanel"
-          setShowProjectModal={setShowProjectModal}
+          handleProjectClick={() => handleProjectClick(0)}
         />
         <ProjectPanel
           imageSrc="/images/outdoorAdventures.jpg"
@@ -42,7 +67,7 @@ const ProjectSection = () => {
           projectTitle="Outdoor Adventures"
           description="Full Stack"
           panelType="bottomRightPanel"
-          setShowProjectModal={setShowProjectModal}
+          handleProjectClick={() => handleProjectClick(1)}
         />
         <ProjectPanel
           imageSrc="/images/invoiceGenerator.jpg"
@@ -50,7 +75,7 @@ const ProjectSection = () => {
           projectTitle="Invoice Generator"
           description="Full Stack"
           panelType="topRightPanel"
-          setShowProjectModal={setShowProjectModal}
+          handleProjectClick={() => handleProjectClick(2)}
         />
       </div>
     </section>

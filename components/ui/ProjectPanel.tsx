@@ -8,7 +8,7 @@ interface ProjectPanelProps {
   imageSrc: string;
   imageAlt: string;
   panelType: string;
-  setShowProjectModal: Dispatch<SetStateAction<boolean>>;
+  handleProjectClick: () => void;
 }
 
 const ProjectPanel = ({
@@ -17,12 +17,8 @@ const ProjectPanel = ({
   imageSrc,
   imageAlt,
   panelType,
-  setShowProjectModal,
+  handleProjectClick,
 }: ProjectPanelProps) => {
-  const handleMoreInfoClick = () => {
-    setShowProjectModal(true);
-  };
-
   return (
     <div className={styles.projectPanel}>
       <Image src={imageSrc} alt={imageAlt} layout="fill" objectFit="cover" />
@@ -31,7 +27,7 @@ const ProjectPanel = ({
           <div className={styles.projectInfo}>
             <h3>{projectTitle}</h3>
             <p>{description}</p>
-            <button onClick={handleMoreInfoClick}>More Info</button>
+            <button onClick={handleProjectClick}>More Info</button>
           </div>
         </div>
       </div>
