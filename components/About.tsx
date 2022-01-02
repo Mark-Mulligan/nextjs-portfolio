@@ -6,6 +6,8 @@ const About = () => {
     <section className={styles.about}>
       <div className={styles.leftCol}>
         <Image
+          blurDataURL="/images/profile-picture-square.jpg"
+          placeholder="blur"
           className={styles.profilePicture}
           src="/images/profile-picture-square.jpg"
           alt="Picture of Mark Mulligan"
