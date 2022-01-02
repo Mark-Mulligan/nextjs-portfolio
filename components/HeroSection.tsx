@@ -1,5 +1,6 @@
 import styles from '../styles/HeroSection.module.scss';
 import Image from 'next/image';
+import HeroBackground from './ui/HeroBackground';
 
 interface HeroSectionProps {
   handleAboutSectionToggle: (selectedItem: string, position: string) => void;
@@ -58,7 +59,7 @@ const HeroSection = ({ handleAboutSectionToggle }: HeroSectionProps) => {
       </nav>
 
       <div className={styles.nameContainer}>
-        <div className={styles.shape}></div>
+        <HeroBackground />
         <h1 className={styles.firstName}>Mark</h1>
         <h1 className={styles.lastName}>Mulligan</h1>
       </div>

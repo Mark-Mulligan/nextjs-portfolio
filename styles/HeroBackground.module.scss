@@ -1,0 +1,18 @@
+.triangle {
+  clip-path: polygon(100% 0, 0 0, 46% 100%);
+  left: 95px;
+  position: absolute;
+  height: 400px;
+  width: 1010px;
+  background: rgb(255, 255, 255, 0.2);
+}
+
+.t2 {
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  position: absolute;
+  height: 400px;
+  width: 505px;
+  background: rgb(255, 255, 255, 0.2);
+  top: -399px;
+  left: 600px;
+}
