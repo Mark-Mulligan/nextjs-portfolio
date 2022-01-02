@@ -24,6 +24,13 @@ const Home: NextPage = () => {
         <title>Mark Mulligan - Developer</title>
         <meta name="description" content="Mark Mulligan's web developer portfolio" />
         <link rel="icon" href="/favicon.ico" />
+
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossOrigin="anonymous"
+        />
       </Head>
 
       <main>

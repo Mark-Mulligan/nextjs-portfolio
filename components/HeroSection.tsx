@@ -36,12 +36,12 @@ const HeroSection = ({ handleAboutSectionToggle }: HeroSectionProps) => {
             <div className={styles.socialLinks}>
               <li className={styles.mr}>
                 <a href="https://github.com/Mark-Mulligan" target="_blank" rel="noreferrer">
-                  <Image height={50} width={50} src="/icons/githubWhite.svg" alt="github link" />
+                  <i className="fab fa-github fa-2x"></i>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/mark-mulligan-50/" target="_blank" rel="noreferrer">
-                  <Image height={45} width={45} src="/icons/linkedin.svg" alt="Linkedin Link" />
+                  <i className="fab fa-linkedin fa-2x"></i>
                 </a>
               </li>
             </div>
