@@ -4,34 +4,28 @@ import styles from '../styles/Social.module.scss';
 const Social = () => {
   return (
     <section className={styles.socialSection}>
-      <div>
-        <div className={styles.socialWrapper}>
+      <ul>
+        <li>
           <a href="https://www.linkedin.com/in/mark-mulligan-50/" target="_blank" rel="noreferrer">
-            <Image layout="fill" objectFit="contain" src="/icons/linkedin.svg" alt="linkedin link" />
+            <i className="fab fa-github fa-2x"></i>
           </a>
-        </div>
-      </div>
-      <div>
-        <div className={styles.socialWrapper}>
+        </li>
+        <li>
           <a href="https://github.com/Mark-Mulligan" target="_blank" rel="noreferrer">
-            <Image layout="fill" objectFit="contain" src="/icons/githubWhite.svg" alt="github link" />
+            <i className="fab fa-linkedin fa-2x"></i>
           </a>
-        </div>
-      </div>
-      <div>
-        <div className={styles.socialWrapper}>
-          <a>
-            <Image layout="fill" objectFit="contain" src="/icons/facebook.svg" alt="facebook link" />
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mark.mulligan.5264" target="_blank" rel="noreferrer">
+            <i className="fab fa-facebook-square fa-2x"></i>
           </a>
-        </div>
-      </div>
-      <div>
-        <div className={styles.socialWrapper}>
-          <a>
-            <Image layout="fill" objectFit="contain" src="/icons/instagram.svg" alt="instagram link" />
+        </li>
+        <li>
+          <a href="https://www.instagram.com/mark_mulligan1" target="_blank" rel="noreferrer">
+            <i className="fab fa-instagram fa-2x"></i>
           </a>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
   );
 };
