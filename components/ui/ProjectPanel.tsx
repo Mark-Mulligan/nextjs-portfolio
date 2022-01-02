@@ -1,5 +1,4 @@
 import styles from '../../styles/ProjectPanel.module.scss';
-import { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 
 interface ProjectPanelProps {
@@ -21,7 +20,15 @@ const ProjectPanel = ({
 }: ProjectPanelProps) => {
   return (
     <div className={styles.projectPanel}>
-      <Image src={imageSrc} alt={imageAlt} layout="fill" objectFit="cover" />
+      <Image
+        blurDataURL={imageSrc}
+        placeholder="blur"
+        src={imageSrc}
+        alt={imageAlt}
+        layout="fill"
+        objectFit="cover"
+        lazyBoundary="800px"
+      />
       <div className={`${styles.descriptionBackground} ${styles[panelType]}`}>
         <div className={styles.projectInfoWrapper}>
           <div className={styles.projectInfo}>
