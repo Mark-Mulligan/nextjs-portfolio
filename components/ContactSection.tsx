@@ -1,5 +1,6 @@
 import styles from '../styles/ContactSection.module.scss';
 import Image from 'next/image';
+import { Link } from 'react-scroll';
 
 interface ContactSectionProps {
   handleAboutSectionToggle: (selectedItem: string, position: string) => void;
@@ -15,17 +16,31 @@ const ContactSection = ({ handleAboutSectionToggle }: ContactSectionProps) => {
               <Image height={50} width={50} src="/icons/website-logo.png" alt="M Logo" />
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <Link to="projects" spy={true} smooth={true} duration={600}>
+                Projects
+              </Link>
             </li>
             <li>
-              <a href="#about" onClick={() => handleAboutSectionToggle('Skills', '0')}>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                onClick={() => handleAboutSectionToggle('Skills', '0')}
+              >
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" onClick={() => handleAboutSectionToggle('About', '-200%')}>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                onClick={() => handleAboutSectionToggle('About', '-200%')}
+              >
                 About
-              </a>
+              </Link>
             </li>
           </div>
           <div className={styles.socialLinks}>

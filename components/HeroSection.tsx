@@ -1,6 +1,7 @@
 import styles from '../styles/HeroSection.module.scss';
 import Image from 'next/image';
 import HeroBackground from './ui/HeroBackground';
+import { Link } from 'react-scroll';
 
 interface HeroSectionProps {
   handleAboutSectionToggle: (selectedItem: string, position: string) => void;
@@ -18,20 +19,36 @@ const HeroSection = ({ handleAboutSectionToggle }: HeroSectionProps) => {
           <ul className={styles.navLinks}>
             <div className={styles.pageLinks}>
               <li>
-                <a href="#projects">Projects</a>
+                <Link to="projects" spy={true} smooth={true} duration={1000}>
+                  Projects
+                </Link>
               </li>
               <li>
-                <a href="#about" onClick={() => handleAboutSectionToggle('Skills', '0')}>
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  onClick={() => handleAboutSectionToggle('Skills', '0')}
+                >
                   Skills
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" onClick={() => handleAboutSectionToggle('About', '-200%')}>
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  onClick={() => handleAboutSectionToggle('About', '-200%')}
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <Link to="contact" spy={true} smooth={true} duration={1500}>
+                  Contact
+                </Link>
               </li>
             </div>
             <div className={styles.socialLinks}>
