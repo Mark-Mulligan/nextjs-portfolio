@@ -14,7 +14,7 @@ const FrontEndSkills = [
   'Styled Components',
 ];
 
-const BackEndSkills = ['Node.js', 'Phython', 'Socket.io', 'MSSQL', 'MongoDB', 'Azure', 'REST APIS', 'GraphQL'];
+const BackEndSkills = ['Node.js', 'Python', 'Socket.io', 'MSSQL', 'MongoDB', 'Azure', 'REST APIS', 'GraphQL'];
 
 const Skills = () => {
   const renderSkills = (skillsArr: string[]) => {

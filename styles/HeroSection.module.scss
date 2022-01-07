@@ -7,6 +7,8 @@
 
 .navbar {
   display: grid;
+  position: relative;
+  z-index: 1;
   grid-template-columns: 95px auto;
   max-width: 1200px;
   margin: auto;
