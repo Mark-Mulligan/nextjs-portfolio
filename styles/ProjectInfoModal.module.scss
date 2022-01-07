@@ -92,3 +92,9 @@
 .mr10 {
   margin-right: 10px;
 }
+
+@media (max-width: 350px) {
+  .modal {
+    margin: 0;
+  }
+}
