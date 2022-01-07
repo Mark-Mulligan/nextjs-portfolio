@@ -23,8 +23,8 @@ const Cube = (props: any) => {
   let rotate = screenYPosition / 250;
 
   return (
-    <mesh {...props} position={[4.5, 1.2, -1.2]} castShadow rotation={[0.72 - rotate, 0.32, 0.14]}>
-      <boxGeometry args={[6, 6, 6]} />
+    <mesh {...props} position={props.position} castShadow rotation={[0.72 - rotate, 0.32, 0.14]}>
+      <boxGeometry args={props.args} />
       <meshLambertMaterial attach="material" color="white" opacity={0.9} />
     </mesh>
   );
@@ -32,6 +32,7 @@ const Cube = (props: any) => {
 
 const HeroBackground = () => {
   const [screenYPosition, setScreenYPosition] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -39,10 +40,32 @@ const HeroBackground = () => {
     });
   }, []);
 
-  let rotate = screenYPosition / 3.5;
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setScreenWidth(window.innerWidth);
+    });
+  }, []);
+
+  let moveDown = screenYPosition / 3.5;
+
+  const determineCubeSize = () => {
+    if (screenWidth > 1000) {
+      return [6, 6, 6];
+    } else {
+      return [4, 4, 4];
+    }
+  };
+
+  const determineCubePostion = () => {
+    if (screenWidth > 1000) {
+      return [4.5, 1.2, -1.2];
+    } else {
+      return [4.5, 0, -1.2];
+    }
+  };
 
   return (
-    <div className={styles.animationContainer} style={{ top: -270 + rotate }}>
+    <div className={styles.animationContainer} style={{ top: -270 + moveDown }}>
       <Canvas shadows camera={{ position: [-5, 2, 10], fov: 60 }}>
         <ambientLight intensity={0.1} />
         <directionalLight
@@ -69,7 +92,7 @@ const HeroBackground = () => {
             <shadowMaterial opacity={0.2} />
           </mesh>
         </group>
-        <Cube position={[1, 0, -1]} />
+        <Cube args={determineCubeSize()} position={determineCubePostion()} />
       </Canvas>
     </div>
   );
