@@ -6,24 +6,25 @@ type cubeRef = null | any;
 
 const Cube = (props: any) => {
   const [screenYPosition, setScreenYPosition] = useState(0);
-  // const cubeRef: cubeRef = useRef(null);
+  const cubeRef: cubeRef = useRef(null);
 
-  // useFrame((state, delta) => {
-  //   if (cubeRef.current && cubeRef.current.rotation) {
-  //     cubeRef.current.rotation.x = cubeRef.current.rotation.y += 0.003;
-  //   }
-  // });
+  useFrame((state, delta) => {
+    if (cubeRef.current && cubeRef.current.rotation) {
+      cubeRef.current.rotation.x = cubeRef.current.rotation.y += 0.003;
+    }
+  });
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      setScreenYPosition(window.scrollY);
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => {
+  //     setScreenYPosition(window.scrollY);
+  //   });
+  // }, []);
 
-  let rotate = screenYPosition / 270;
+  // let rotate = screenYPosition / 270;
+  // let rotate = 0;
 
   return (
-    <mesh {...props} position={props.position} castShadow rotation={[0.72 - rotate, 0.32, 0.14]}>
+    <mesh ref={cubeRef} {...props} position={props.position} castShadow rotation={[0.72, 0.32, 0.14]}>
       <boxGeometry args={props.args} />
       <meshLambertMaterial attach="material" color="white" opacity={0.9} />
     </mesh>
