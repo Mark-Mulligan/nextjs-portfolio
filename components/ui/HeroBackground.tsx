@@ -35,16 +35,25 @@ const HeroBackground = () => {
   const [screenYPosition, setScreenYPosition] = useState(0);
   const [screenWidth, setScreenWidth] = useState(1400);
 
+  const handleScroll = () => {
+    setScreenYPosition(window.scrollY);
+  };
+
+  const handleResize = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      setScreenYPosition(window.scrollY);
-    });
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      setScreenWidth(window.innerWidth);
-    });
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   let moveDown = screenYPosition / 2.8;
