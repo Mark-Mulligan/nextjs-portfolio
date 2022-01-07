@@ -29,6 +29,14 @@ const projectInfo = [
     videoLink: 'https://youtu.be/ofsShzbOSEA',
     githubLink: 'https://github.com/Mark-Mulligan/invoice-gen',
   },
+  {
+    title: 'Oil Rig Dashboard',
+    description:
+      'This project was built as part of the EOG React Visualization Assessment. The goal of the project was to create a dashboard that depicts live data in the form of graphs and metric readings. This dashboard would in turn be used by either engineers or managers of an oil refinery so they can make sure all the equipment is working properly. The data is provided by a graphQL api designed by EOG and simulates hypothetical set of equipment in the field (in this case, metric reading for an oil refinery). After the data is received, it is stored and manipulated on the front end using Redux.',
+    builtWith: 'React.js, GraphQL, Redux, Typescript, Recharts',
+    liveLink: 'https://github.com/Mark-Mulligan/eog-react-assessment-v2.0',
+    githubLink: 'https://react-data-visualization.netlify.app/',
+  },
 ];
 
 const ProjectSection = () => {
@@ -81,6 +89,15 @@ const ProjectSection = () => {
           panelType="topRightPanel"
           aosData="fade-left"
           handleProjectClick={() => handleProjectClick(2)}
+        />
+        <ProjectPanel
+          imageSrc="/images/eogAssessment.jpg"
+          imageAlt="Picture of EOG Project"
+          projectTitle="Oil Rig Dashboard"
+          description="Front End"
+          panelType="bottomRightPanel"
+          aosData="fade-right"
+          handleProjectClick={() => handleProjectClick(3)}
         />
       </div>
     </section>

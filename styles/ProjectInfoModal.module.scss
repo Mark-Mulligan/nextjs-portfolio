@@ -18,10 +18,11 @@
 }
 
 .modal {
-  max-width: 600px;
+  max-width: 650px;
   margin-left: 15px;
   margin-right: 15px;
-  background: grey;
+  background: $dark-blue-font;
+  opacity: 0.9;
   border-radius: 5px;
 }
 
@@ -29,7 +30,7 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid white;
-  padding: 15px;
+  padding: 1.5rem;
 
   .modalTitle {
     margin: 0;
@@ -47,12 +48,12 @@
 
   .close:hover {
     cursor: pointer;
-    color: rgb(80, 80, 80);
+    color: rgb(180, 180, 180);
   }
 }
 
 .modalBody {
-  padding: 15px;
+  padding: 1.5rem;
 
   h6 {
     margin-top: 0;
@@ -69,7 +70,7 @@
 
 .modalFooter {
   border-top: 1px solid white;
-  padding: 15px;
+  padding: 1.5rem;
 }
 
 .linkBtn {
@@ -84,7 +85,8 @@
 
 .linkBtn:hover {
   cursor: pointer;
-  background: rgb(110, 110, 110);
+  background: white;
+  color: $dark-blue-font;
 }
 
 .mr10 {

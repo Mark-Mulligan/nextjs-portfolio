@@ -20,7 +20,7 @@ const Cube = (props: any) => {
     });
   }, []);
 
-  let rotate = screenYPosition / 250;
+  let rotate = screenYPosition / 270;
 
   return (
     <mesh {...props} position={props.position} castShadow rotation={[0.72 - rotate, 0.32, 0.14]}>
