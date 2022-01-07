@@ -47,7 +47,9 @@ const ProjectSection = () => {
   return (
     <section className={styles.projectSection}>
       <div>
-        <h2 id="projects">Projects</h2>
+        <h2 data-aos="fade-right" id="projects">
+          Projects
+        </h2>
         <ProjectInfoModal
           showModal={showProjectModal}
           closeProjectModal={closeProjectModal}
@@ -59,6 +61,7 @@ const ProjectSection = () => {
           projectTitle="Better Music"
           description="Front End - UI"
           panelType="topRightPanel"
+          aosData="fade-left"
           handleProjectClick={() => handleProjectClick(0)}
         />
         <ProjectPanel
@@ -67,6 +70,7 @@ const ProjectSection = () => {
           projectTitle="Outdoor Adventures"
           description="Full Stack"
           panelType="bottomRightPanel"
+          aosData="fade-right"
           handleProjectClick={() => handleProjectClick(1)}
         />
         <ProjectPanel
@@ -75,6 +79,7 @@ const ProjectSection = () => {
           projectTitle="Invoice Generator"
           description="Full Stack"
           panelType="topRightPanel"
+          aosData="fade-left"
           handleProjectClick={() => handleProjectClick(2)}
         />
       </div>

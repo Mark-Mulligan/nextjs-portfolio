@@ -7,6 +7,7 @@ interface ProjectPanelProps {
   imageSrc: string;
   imageAlt: string;
   panelType: string;
+  aosData: string;
   handleProjectClick: () => void;
 }
 
@@ -16,10 +17,11 @@ const ProjectPanel = ({
   imageSrc,
   imageAlt,
   panelType,
+  aosData,
   handleProjectClick,
 }: ProjectPanelProps) => {
   return (
-    <div className={styles.projectPanel}>
+    <div className={styles.projectPanel} data-aos={aosData}>
       <Image
         blurDataURL={imageSrc}
         placeholder="blur"

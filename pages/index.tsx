@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
@@ -17,6 +20,11 @@ const Home: NextPage = () => {
     setVisableAboutSection(selectedItem);
     setCarouselPosition(position);
   };
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <div className="container">

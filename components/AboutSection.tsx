@@ -19,31 +19,34 @@ const AboutSection = ({
 }: AboutSectionProps) => {
   return (
     <section id="about" className={styles.aboutSection}>
-      <h2>Web Developer</h2>
-      <ul className={styles.aboutNavigator}>
-        {aboutItems.map((item, index) => {
-          if (item === visableAboutSection) {
-            return (
-              <li key={item} className={styles.selected}>
-                <span>{item}</span>
-              </li>
-            );
-          } else {
-            return (
-              <li key={item} onClick={() => handleAboutSectionToggle(item, `${index === 0 ? '0' : `-${index}00%`}`)}>
-                <span>{item}</span>
-              </li>
-            );
-          }
-        })}
-      </ul>
+      <div data-aos="fade-up">
+        <h2>Web Developer</h2>
 
-      <div className={styles.carouselWrapper}>
-        <div className={styles.carousel} style={{ left: carouselPosition }}>
-          <Skills />
-          <Experience />
-          <About />
-          <Social />
+        <ul className={styles.aboutNavigator}>
+          {aboutItems.map((item, index) => {
+            if (item === visableAboutSection) {
+              return (
+                <li key={item} className={styles.selected}>
+                  <span>{item}</span>
+                </li>
+              );
+            } else {
+              return (
+                <li key={item} onClick={() => handleAboutSectionToggle(item, `${index === 0 ? '0' : `-${index}00%`}`)}>
+                  <span>{item}</span>
+                </li>
+              );
+            }
+          })}
+        </ul>
+
+        <div className={styles.carouselWrapper}>
+          <div className={styles.carousel} style={{ left: carouselPosition }}>
+            <Skills />
+            <Experience />
+            <About />
+            <Social />
+          </div>
         </div>
       </div>
     </section>

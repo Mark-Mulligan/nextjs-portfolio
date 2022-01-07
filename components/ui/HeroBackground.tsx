@@ -32,7 +32,7 @@ const Cube = (props: any) => {
 
 const HeroBackground = () => {
   const [screenYPosition, setScreenYPosition] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(1400);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -46,7 +46,7 @@ const HeroBackground = () => {
     });
   }, []);
 
-  let moveDown = screenYPosition / 3.5;
+  let moveDown = screenYPosition / 2.8;
 
   const determineCubeSize = () => {
     if (screenWidth > 1000) {
