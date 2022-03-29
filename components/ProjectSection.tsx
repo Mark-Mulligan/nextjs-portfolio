@@ -5,6 +5,14 @@ import { useState } from 'react';
 
 const projectInfo = [
   {
+    title: 'Just Code',
+    description:
+      'This project was created to help people learn how to code with javascript.  I found that a lot of sights like hacker rank and leet code are good for studying advanced concepts, but not so great for people learning how to code.  I created this site to help others learn how to code by creating simple straighfoward problems to solve.  These problems are also inspired from problems I have had to solve in my day to day job, instead of just fancy algorithmic problems meant to trip you up.',
+    builtWith: 'Next.js, Typescript, Semantic UI React',
+    liveLink: 'https://just-code1.netlify.app',
+    githubLink: 'https://github.com/Mark-Mulligan/just-code',
+  },
+  {
     title: 'Better Music',
     description:
       'I built this project to learn Next.js while taking the opportunity to work on my UI/UX design skills.  I heard great things about Next and after using it, I am hooked.  Static generation was perferct for this site along with dynamic routing.  The image optiomization was extremly useful as well.  As a bouns, I challegned my self to build everything from scratch.  No additional libraries or packages were used in building this project.  I learned a ton from doing this and am glad I took the oppurtuniy to do so.',
@@ -64,40 +72,49 @@ const ProjectSection = () => {
           projectInfo={projectInfo[projectSelectedIndex]}
         />
         <ProjectPanel
+          imageSrc="/images/justCode.png"
+          imageAlt="Picture of the landing page for just code"
+          projectTitle="Just Code"
+          description="Full Stack"
+          panelType="topRightPanel"
+          aosData="fade-left"
+          handleProjectClick={() => handleProjectClick(0)}
+        />
+        <ProjectPanel
           imageSrc="/images/betterMusic.jpg"
           imageAlt="Dr. Beat headphones with dark background."
           projectTitle="Better Music"
           description="Front End - UI"
-          panelType="topRightPanel"
-          aosData="fade-left"
-          handleProjectClick={() => handleProjectClick(0)}
+          panelType="bottomRightPanel"
+          aosData="fade-right"
+          handleProjectClick={() => handleProjectClick(1)}
         />
         <ProjectPanel
           imageSrc="/images/outdoorAdventures.jpg"
           imageAlt="Forest on a mountain"
           projectTitle="Outdoor Adventures"
           description="Full Stack"
-          panelType="bottomRightPanel"
-          aosData="fade-right"
-          handleProjectClick={() => handleProjectClick(1)}
+          panelType="topRightPanel"
+          aosData="fade-left"
+          handleProjectClick={() => handleProjectClick(2)}
         />
         <ProjectPanel
           imageSrc="/images/invoiceGenerator.jpg"
           imageAlt="Computer with an invoice on the screen"
           projectTitle="Invoice Generator"
           description="Full Stack"
-          panelType="topRightPanel"
-          aosData="fade-left"
-          handleProjectClick={() => handleProjectClick(2)}
+          panelType="bottomRightPanel"
+          aosData="fade-right"
+          handleProjectClick={() => handleProjectClick(3)}
         />
         <ProjectPanel
           imageSrc="/images/eogAssessment.jpg"
           imageAlt="Picture of EOG Project"
           projectTitle="Oil Rig Dashboard"
           description="Front End"
-          panelType="bottomRightPanel"
-          aosData="fade-right"
-          handleProjectClick={() => handleProjectClick(3)}
+          panelType="topRightPanel"
+          aosData="fade-left"
+          handleProjectClick={() => handleProjectClick(4)}
         />
       </div>
     </section>

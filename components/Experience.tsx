@@ -28,9 +28,12 @@ const Experience = () => {
           <h6>Evolon</h6>
           <p>February 2022 - Present</p>
           <ul>
-            <li>Worked with different school districts to update and maintain their websites</li>
-            <li>Built custom applications for clients to assist with business operations</li>
-            <li>Provided design input for UI/UX layouts and marketing concepts</li>
+            <li>
+              Typescript / React / Node.js development for a product that leverages AI to make security cameras more
+              intelligent
+            </li>
+            <li>Responsible for modernizing UI/UX design on legacy applcations</li>
+            <li>Assisted with architecture and design of a brand new enterprise software</li>
           </ul>
         </div>
       </div>
