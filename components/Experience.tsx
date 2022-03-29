@@ -9,7 +9,7 @@ const Experience = () => {
         </div>
         <div className={styles.rightCol}>
           <h6>Visual Storage Intelligence</h6>
-          <p>June 2021 - Present</p>
+          <p>June 2021 - February 2022</p>
           <ul>
             <li>
               Python / React / Node.js / MSSQL developement engineer for an application that provides in-depth
@@ -22,11 +22,11 @@ const Experience = () => {
 
       <div className={styles.row}>
         <div className={styles.leftCol}>
-          <h4>Freelance Developer</h4>
+          <h4>Full Stack Developer</h4>
         </div>
         <div className={styles.rightCol}>
-          <h6>Mulligan Designs</h6>
-          <p>2019 - Present</p>
+          <h6>Evolon</h6>
+          <p>February 2022 - Present</p>
           <ul>
             <li>Worked with different school districts to update and maintain their websites</li>
             <li>Built custom applications for clients to assist with business operations</li>
