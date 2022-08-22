@@ -18,10 +18,12 @@ const About = () => {
       <div className={styles.rightCol}>
         <p>
           Hi! I&#39;m Mark, a software developer based in Dallas, TX. I currently work as a full stack developer for
-          Visual Storage Intelligence where I support all levels of the VSI application. Our application, built using
-          Python / React / Node.js / MSSQL, provides in-depth enterprise storage analytics and reporting. Because of
-          this, I have a lot of experience working with advanced data visuallization and dynamic websites with ever
-          changing data.
+          Evolon technologies using Typescript / React / Node.js for developing a product that leverages AI to make
+          security cameras more intelligent. I am responsible for modernizing the front end on legacy applications by
+          leveraging react to make the front end more performant and easier to update. I have also lead efforts in
+          making our applications browser agonistic as well as updating the ui to modern design standards. In addition
+          to these efforts, I introduced new tutorial interfaces to the application that assist with installation and
+          overall usage of our product.
         </p>
         <p>When I am not coding, I enjoy cooking, snowboarding, and playing the drums. </p>
       </div>

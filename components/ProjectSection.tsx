@@ -99,15 +99,6 @@ const ProjectSection = () => {
           aosData="fade-right"
           handleProjectClick={() => handleProjectClick(3)}
         />
-        <ProjectPanel
-          imageSrc="/images/eogAssessment.jpg"
-          imageAlt="Picture of EOG Project"
-          projectTitle="Oil Rig Dashboard"
-          description="Front End"
-          panelType="topRightPanel"
-          aosData="fade-left"
-          handleProjectClick={() => handleProjectClick(4)}
-        />
       </div>
     </section>
   );
