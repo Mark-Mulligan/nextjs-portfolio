@@ -66,7 +66,7 @@ const HeroBackground = () => {
     }
   };
 
-  const determineCubePostion = () => {
+  const determineCubePosition = () => {
     if (screenWidth > 1000) {
       return [4.5, 1.2, -1.2];
     } else {
@@ -81,7 +81,7 @@ const HeroBackground = () => {
         <directionalLight
           castShadow
           position={[0, 20, 0]}
-          intesity={1.2}
+          intensity={1.2}
           shadow-mapSize-width={1000}
           shadow-mapSize-height={1000}
           shadow-camera-far={50}
@@ -102,7 +102,7 @@ const HeroBackground = () => {
             <shadowMaterial opacity={0.2} />
           </mesh>
         </group>
-        <Cube args={determineCubeSize()} position={determineCubePostion()} />
+        <Cube args={determineCubeSize()} position={determineCubePosition()} />
       </Canvas>
     </div>
   );

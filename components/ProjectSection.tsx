@@ -13,13 +13,14 @@ const projectInfo = [
     githubLink: 'https://github.com/Mark-Mulligan/just-code',
   },
   {
-    title: 'Better Music',
+    title: 'Invoice Generator',
     description:
-      'I built this project to learn Next.js while taking the opportunity to work on my UI/UX design skills.  I heard great things about Next and after using it, I am hooked.  Static generation was perfect for this site along with dynamic routing.  The image optimization was extremely useful as well.  As a bonus, I challenged my self to build everything from scratch.  No additional libraries or packages were used in building this project.  I learned a ton from doing this and am glad I took the opportunity to do so.',
-    builtWith: 'Next.js, CSS modules, Style and Components custom made - no libraries used',
-    liveLink: 'https://bettermusic.netlify.app',
-    githubLink: 'https://github.com/Mark-Mulligan/better-music',
+      'I built this application for one of my friends who is a private music teacher. He spends a lot of time putting together invoices for the parents of the students he teachers each month. This program is designed to streamline that process. I also included a way to save and organize a roster of students. This data is present to the user in the form of table to can be easily searched and sorted. I used google oauth to login in the users, firebase to store all the necessary data, and the react-pdf package to create and generate professional invoices that can be downloaded and used as needed.',
+    builtWith: 'Next.js, MUI, Firebase, Next/auth, React-PDF',
+    liveLink: 'https://lesson-invoice-generator.netlify.app/',
+    githubLink: 'https://github.com/Mark-Mulligan/next-invoice-generator',
   },
+
   {
     title: 'Outdoor Adventures',
     description:
@@ -30,12 +31,12 @@ const projectInfo = [
     githubLink: 'https://github.com/Mark-Mulligan/outdoor-adventures-frontend-v1.0',
   },
   {
-    title: 'Invoice Generator',
+    title: 'Better Music',
     description:
-      'I built this application for one of my friends who is a private music teacher. He spends a lot of time putting together invoices for the parents of the students he teachers each month. This program is designed to streamline that process. I also included a way to save and organize a roster of students. This data is present to the user in the form of table to can be easily searched and sorted. I used google oauth to login in the users, mongoDB to store all the necessary data, and the react-pdf package to create and generate professional invoices that can be downloaded and used as needed.',
-    builtWith: 'React.js, Node.js, MongoDB, Bootstrap, React-PDF',
-    videoLink: 'https://youtu.be/ofsShzbOSEA',
-    githubLink: 'https://github.com/Mark-Mulligan/invoice-gen',
+      'I built this project to learn Next.js while taking the opportunity to work on my UI/UX design skills.  I heard great things about Next and after using it, I am hooked.  Static generation was perfect for this site along with dynamic routing.  The image optimization was extremely useful as well.  As a bonus, I challenged my self to build everything from scratch.  No additional libraries or packages were used in building this project.  I learned a ton from doing this and am glad I took the opportunity to do so.',
+    builtWith: 'Next.js, CSS modules, Style and Components custom made - no libraries used',
+    liveLink: 'https://bettermusic.netlify.app',
+    githubLink: 'https://github.com/Mark-Mulligan/better-music',
   },
 ];
 
@@ -73,10 +74,10 @@ const ProjectSection = () => {
           handleProjectClick={() => handleProjectClick(0)}
         />
         <ProjectPanel
-          imageSrc="/images/betterMusic.jpg"
-          imageAlt="Dr. Beat headphones with dark background."
-          projectTitle="Better Music"
-          description="Front End - UI"
+          imageSrc="/images/invoiceGenerator.png"
+          imageAlt="Invoice page of the invoice generator app"
+          projectTitle="Invoice Generator"
+          description="Full Stack"
           panelType="bottomRightPanel"
           aosData="fade-right"
           handleProjectClick={() => handleProjectClick(1)}
@@ -91,10 +92,10 @@ const ProjectSection = () => {
           handleProjectClick={() => handleProjectClick(2)}
         />
         <ProjectPanel
-          imageSrc="/images/invoiceGenerator.jpg"
-          imageAlt="Computer with an invoice on the screen"
-          projectTitle="Invoice Generator"
-          description="Full Stack"
+          imageSrc="/images/betterMusic.jpg"
+          imageAlt="Dr. Beat headphones with dark background."
+          projectTitle="Better Music"
+          description="Front End - UI"
           panelType="bottomRightPanel"
           aosData="fade-right"
           handleProjectClick={() => handleProjectClick(3)}
