@@ -24,11 +24,10 @@ const projectInfo = [
   {
     title: 'Outdoor Adventures',
     description:
-      'I am an active person and always enjoyed spending time outdoors. I designed this application to help search through and find detailed information on all the national parks in the United States. While building this project, I was able to incorporate a lot of different programming concepts that I wanted to explore. This project features server side pagination, redux state management and using library styled components to handle all css styling and complying. It is a fully stack application that is completely responsive.',
-    builtWith:
-      'Redux (using Redux Toolkit), Styled Components, React.js, Node.js, MySQL, Bootstrap, React Google Maps, National Parks API',
-    liveLink: 'https://outdoor-adventures1.netlify.app',
-    githubLink: 'https://github.com/Mark-Mulligan/outdoor-adventures-frontend-v1.0',
+      'I am an active person and always enjoyed spending time outdoors. I designed this application to help search through and find detailed information on all the national parks in the United States. While building this project, I was able to incorporate a lot of different programming concepts that I wanted to explore. This project features pagination, sorting, and using tailwind to handle all styling. It is a full stack application that is completely responsive.',
+    builtWith: 'Next.js, Tailwind, Typescript, Prisma, MySQL, React Google Maps, National Parks API',
+    liveLink: 'https://searchnationalparks.netlify.app',
+    githubLink: 'https://github.com/Mark-Mulligan/t3-outdoor-adventures',
   },
   {
     title: 'Better Music',
