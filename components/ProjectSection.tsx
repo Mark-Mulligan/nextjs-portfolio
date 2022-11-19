@@ -5,6 +5,14 @@ import { useState } from 'react';
 
 const projectInfo = [
   {
+    title: 'US Housing Data',
+    description:
+      'I built this application to allow me to track the us housing market. The charts quickly allow you to look at trends in the housing market based on historical data gathered from the last five years.  The data was provided by relator.com',
+    builtWith: 'Next.js, Typescript, Tailwind, Recharts',
+    liveLink: 'https://us-housing-data.vercel.app',
+    githubLink: 'https://github.com/Mark-Mulligan/housing-data',
+  },
+  {
     title: 'Just Code',
     description:
       'This project was created to help people learn how to code with javascript.  I found that a lot of sights like hacker rank and leet code are good for studying advanced concepts, but not so great for people learning how to code.  I created this site to help others learn how to code by creating simple straightforward problems to solve.  These problems are also inspired from problems I have had to solve in my day to day job, instead of just fancy algorithmic problems meant to trip you up.',
@@ -64,40 +72,49 @@ const ProjectSection = () => {
           projectInfo={projectInfo[projectSelectedIndex]}
         />
         <ProjectPanel
-          imageSrc="/images/justCode.png"
-          imageAlt="Picture of the landing page for just code"
-          projectTitle="Just Code"
-          description="Full Stack"
+          imageSrc="/images/housingData.jpg"
+          imageAlt="Overview of housing data website."
+          projectTitle="US Housing Data"
+          description="Front End - UI"
           panelType="topRightPanel"
           aosData="fade-left"
           handleProjectClick={() => handleProjectClick(0)}
         />
         <ProjectPanel
-          imageSrc="/images/invoiceGenerator.png"
-          imageAlt="Invoice page of the invoice generator app"
-          projectTitle="Invoice Generator"
+          imageSrc="/images/justCode.png"
+          imageAlt="Picture of the landing page for just code"
+          projectTitle="Just Code"
           description="Full Stack"
           panelType="bottomRightPanel"
           aosData="fade-right"
           handleProjectClick={() => handleProjectClick(1)}
         />
         <ProjectPanel
-          imageSrc="/images/outdoorAdventures.jpg"
-          imageAlt="Forest on a mountain"
-          projectTitle="Outdoor Adventures"
+          imageSrc="/images/invoiceGenerator.png"
+          imageAlt="Invoice page of the invoice generator app"
+          projectTitle="Invoice Generator"
           description="Full Stack"
           panelType="topRightPanel"
           aosData="fade-left"
           handleProjectClick={() => handleProjectClick(2)}
         />
         <ProjectPanel
+          imageSrc="/images/outdoorAdventures.jpg"
+          imageAlt="Forest on a mountain"
+          projectTitle="Outdoor Adventures"
+          description="Full Stack"
+          panelType="bottomRightPanel"
+          aosData="fade-right"
+          handleProjectClick={() => handleProjectClick(3)}
+        />
+        <ProjectPanel
           imageSrc="/images/betterMusic.jpg"
           imageAlt="Dr. Beat headphones with dark background."
           projectTitle="Better Music"
           description="Front End - UI"
-          panelType="bottomRightPanel"
-          aosData="fade-right"
-          handleProjectClick={() => handleProjectClick(3)}
+          panelType="topRightPanel"
+          aosData="fade-left"
+          handleProjectClick={() => handleProjectClick(4)}
         />
       </div>
     </section>
