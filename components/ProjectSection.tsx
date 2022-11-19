@@ -6,8 +6,7 @@ import { useState } from 'react';
 const projectInfo = [
   {
     title: 'US Housing Data',
-    description:
-      'I built this application to allow me to track the us housing market. The charts quickly allow you to look at trends in the housing market based on historical data gathered from the last five years.  The data was provided by relator.com',
+    description: `I built this application to allow me to track the United State's housing market. The charts quickly allow you to look at trends in the housing market based on historical data gathered from the last five years.  The data was provided by relator.com`,
     builtWith: 'Next.js, Typescript, Tailwind, Recharts',
     liveLink: 'https://us-housing-data.vercel.app',
     githubLink: 'https://github.com/Mark-Mulligan/housing-data',
