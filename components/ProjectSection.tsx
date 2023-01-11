@@ -15,9 +15,9 @@ const projectInfo = [
     title: 'Just Code',
     description:
       'This project was created to help people learn how to code with javascript.  I found that a lot of sights like hacker rank and leet code are good for studying advanced concepts, but not so great for people learning how to code.  I created this site to help others learn how to code by creating simple straightforward problems to solve.  These problems are also inspired from problems I have had to solve in my day to day job, instead of just fancy algorithmic problems meant to trip you up.',
-    builtWith: 'Next.js, Typescript, Semantic UI React',
-    liveLink: 'https://just-code1.netlify.app',
-    githubLink: 'https://github.com/Mark-Mulligan/just-code',
+    builtWith: 'Next.js, Typescript, Tailwind, Supabase(sql)',
+    liveLink: 'https://just-code.vercel.app/',
+    githubLink: 'https://github.com/Mark-Mulligan/just-code-v2',
   },
   {
     title: 'Invoice Generator',
@@ -80,7 +80,7 @@ const ProjectSection = () => {
           handleProjectClick={() => handleProjectClick(0)}
         />
         <ProjectPanel
-          imageSrc="/images/justCode.png"
+          imageSrc="/images/justCodeChallengeScreen.png"
           imageAlt="Picture of the landing page for just code"
           projectTitle="Just Code"
           description="Full Stack"
