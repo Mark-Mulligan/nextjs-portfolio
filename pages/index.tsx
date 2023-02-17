@@ -30,7 +30,7 @@ const Home: NextPage = () => {
     <div className="container">
       <Head>
         <meta name="title" property="og:title" content="Mark Mulligan - Full Stack Developer" />
-        <meta name="type" property="og:type" content="website" />
+        <meta property="og:type" content="website" />
         <meta name="image" property="og:image" content="https://markmulligan.dev/images/portfolio.png" />
         <meta name="url" property="og:url" content="https://markmulligan.dev/" />
         <meta
