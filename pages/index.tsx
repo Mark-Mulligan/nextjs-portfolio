@@ -29,8 +29,8 @@ const Home: NextPage = () => {
   return (
     <div className="container">
       <Head>
+        <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
         <meta name="title" property="og:title" content="Mark Mulligan - Full Stack Developer" />
-        <meta property="og:type" content="website" />
         <meta name="image" property="og:image" content="https://markmulligan.dev/images/portfolio.png" />
         <meta name="url" property="og:url" content="https://markmulligan.dev/" />
         <meta
