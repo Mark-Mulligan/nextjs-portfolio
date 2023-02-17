@@ -29,6 +29,14 @@ const Home: NextPage = () => {
   return (
     <div className="container">
       <Head>
+        <meta name="title" property="og:title" content="Mark Mulligan - Developer" />
+        <meta name="type" property="og:type" content="website" />
+        <meta
+          name="image"
+          property="og:image"
+          content="https://github.com/Mark-Mulligan/Mark-Mulligan/blob/master/portfolioScreenShot.png"
+        />
+        <meta name="url" property="og:url" content="https://markmulligan.dev/" />
         <title>Mark Mulligan - Developer</title>
         <meta name="description" content="Mark Mulligan's web developer portfolio" />
         <link rel="icon" href="/favicon.ico" />
