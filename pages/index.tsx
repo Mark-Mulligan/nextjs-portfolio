@@ -36,7 +36,13 @@ const Home: NextPage = () => {
         <meta
           name="description"
           property="og:description"
-          content="Mark Mulligan is a full stack developer with experience in React, Node.js, Typescript, AWS, and database technologies."
+          content="Hi! I'm Mark, a software developer based in Dallas, TX. I currently work as a full stack developer for
+          Evolon technologies using Typescript / React / Node.js for developing a product that leverages AI to make
+          security cameras more intelligent. I am responsible for modernizing the front end on legacy applications by
+          leveraging react to make the front end more performant and easier to update. I have also lead efforts in
+          making our applications browser agonistic as well as updating the ui to modern design standards. In addition
+          to these efforts, I introduced new tutorial interfaces to the application that assist with installation and
+          overall usage of our product."
         />
         <title>Mark Mulligan - Developer</title>
         <meta name="description" content="Mark Mulligan's web developer portfolio" />
