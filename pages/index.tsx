@@ -45,7 +45,6 @@ const Home: NextPage = () => {
           overall usage of our product."
         />
         <title>Mark Mulligan - Developer</title>
-        <meta name="description" content="Mark Mulligan's web developer portfolio" />
         <link rel="icon" href="/favicon.ico" />
 
         <link
