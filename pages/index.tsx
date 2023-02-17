@@ -37,6 +37,11 @@ const Home: NextPage = () => {
           content="https://github.com/Mark-Mulligan/Mark-Mulligan/blob/master/portfolioScreenShot.png"
         />
         <meta name="url" property="og:url" content="https://markmulligan.dev/" />
+        <meta
+          name="description"
+          property="og:description"
+          content="Mark Mulligan is a full stack developer with experience in React, Node.js, Typescript, AWS, and database technologies."
+        />
         <title>Mark Mulligan - Developer</title>
         <meta name="description" content="Mark Mulligan's web developer portfolio" />
         <link rel="icon" href="/favicon.ico" />
