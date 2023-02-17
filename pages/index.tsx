@@ -29,7 +29,7 @@ const Home: NextPage = () => {
   return (
     <div className="container">
       <Head>
-        <meta name="title" property="og:title" content="Mark Mulligan - Developer" />
+        <meta name="title" property="og:title" content="Mark Mulligan - Full Stack Developer" />
         <meta name="type" property="og:type" content="website" />
         <meta name="image" property="og:image" content="https://markmulligan.dev/images/portfolio.png" />
         <meta name="url" property="og:url" content="https://markmulligan.dev/" />
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
           to these efforts, I introduced new tutorial interfaces to the application that assist with installation and
           overall usage of our product."
         />
-        <title>Mark Mulligan - Developer</title>
+        <title>Mark Mulligan - Full Stack Developer</title>
         <link rel="icon" href="/favicon.ico" />
 
         <link
