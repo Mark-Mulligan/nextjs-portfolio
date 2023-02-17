@@ -26,7 +26,7 @@ const Experience = () => {
         </div>
         <div className={styles.rightCol}>
           <h6>Visual Storage Intelligence</h6>
-          <p>June 2021 - February 2022</p>
+          <p>May 2020 - February 2022</p>
           <ul>
             <li>
               Python / React / Node.js / MSSQL development engineer for an application that provides in-depth enterprise
