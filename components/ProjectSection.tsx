@@ -2,8 +2,18 @@ import styles from '../styles/ProjectSection.module.scss';
 import ProjectInfoModal from './ui/ProjectInfoModal';
 import ProjectPanel from './ui/ProjectPanel';
 import { useState } from 'react';
+import { ProjectInfo } from './ui/ProjectInfoModal';
 
-const projectInfo = [
+const projectInfo: ProjectInfo[] = [
+  {
+    title: 'Invoice Generator',
+    description:
+      'I built this application for one of my friends who is a private music teacher. He spends a lot of time putting together invoices for the parents of the students he teachers each month. This program is designed to streamline that process. I also included a way to save and organize a roster of students. This data is present to the user in the form of table to can be easily searched and sorted. I used google oauth to login in the users, firebase to store all the necessary data, and the react-pdf package to create and generate professional invoices that can be downloaded and used as needed. I also used AWS to be able to send emails directly from the application',
+    builtWith: 'Next.js, MUI, Firebase, Next/auth, React-PDF, AWS SES, AWS Lambdas, AWS API Gateway, AWS SNS Topics',
+    liveLink: 'https://lesson-invoice-generator.netlify.app/',
+    videoLink: 'https://www.youtube.com/watch?v=ZnVdfw9hZRc',
+    githubLink: 'https://github.com/Mark-Mulligan/next-invoice-generator',
+  },
   {
     title: 'US Housing Data',
     description: `I built this application to allow me to track the United State's housing market. The charts quickly allow you to look at trends in the housing market based on historical data gathered from the last five years.  The data was provided by relator.com`,
@@ -19,15 +29,6 @@ const projectInfo = [
     liveLink: 'https://just-code.vercel.app/',
     githubLink: 'https://github.com/Mark-Mulligan/just-code-v2',
   },
-  {
-    title: 'Invoice Generator',
-    description:
-      'I built this application for one of my friends who is a private music teacher. He spends a lot of time putting together invoices for the parents of the students he teachers each month. This program is designed to streamline that process. I also included a way to save and organize a roster of students. This data is present to the user in the form of table to can be easily searched and sorted. I used google oauth to login in the users, firebase to store all the necessary data, and the react-pdf package to create and generate professional invoices that can be downloaded and used as needed.',
-    builtWith: 'Next.js, MUI, Firebase, Next/auth, React-PDF',
-    liveLink: 'https://lesson-invoice-generator.netlify.app/',
-    githubLink: 'https://github.com/Mark-Mulligan/next-invoice-generator',
-  },
-
   {
     title: 'Outdoor Adventures',
     description:
@@ -70,24 +71,7 @@ const ProjectSection = () => {
           closeProjectModal={closeProjectModal}
           projectInfo={projectInfo[projectSelectedIndex]}
         />
-        <ProjectPanel
-          imageSrc="/images/housingData.jpg"
-          imageAlt="Overview of housing data website."
-          projectTitle="US Housing Data"
-          description="Front End - UI"
-          panelType="topRightPanel"
-          aosData="fade-left"
-          handleProjectClick={() => handleProjectClick(0)}
-        />
-        <ProjectPanel
-          imageSrc="/images/justCodeChallengeScreen.png"
-          imageAlt="Picture of the landing page for just code"
-          projectTitle="Just Code"
-          description="Full Stack"
-          panelType="bottomRightPanel"
-          aosData="fade-right"
-          handleProjectClick={() => handleProjectClick(1)}
-        />
+
         <ProjectPanel
           imageSrc="/images/invoiceGenerator.png"
           imageAlt="Invoice page of the invoice generator app"
@@ -95,8 +79,27 @@ const ProjectSection = () => {
           description="Full Stack"
           panelType="topRightPanel"
           aosData="fade-left"
-          handleProjectClick={() => handleProjectClick(2)}
+          handleProjectClick={() => handleProjectClick(0)}
         />
+        <ProjectPanel
+          imageSrc="/images/housingData.jpg"
+          imageAlt="Overview of housing data website."
+          projectTitle="US Housing Data"
+          description="Front End - UI"
+          panelType="bottomRightPanel"
+          aosData="fade-right"
+          handleProjectClick={() => handleProjectClick(1)}
+        />
+        <ProjectPanel
+          imageSrc="/images/justCodeChallengeScreen.png"
+          imageAlt="Picture of the landing page for just code"
+          projectTitle="Just Code"
+          description="Full Stack"
+          panelType="topRightPanel"
+          aosData="fade-left"
+          handleProjectClick={() => handleProjectClick(1)}
+        />
+
         <ProjectPanel
           imageSrc="/images/outdoorAdventures.jpg"
           imageAlt="Forest on a mountain"

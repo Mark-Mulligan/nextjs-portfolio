@@ -1,16 +1,18 @@
 import styles from '../../styles/ProjectInfoModal.module.scss';
 
+export interface ProjectInfo {
+  title: string;
+  description: string;
+  builtWith: string;
+  liveLink?: string;
+  videoLink?: string;
+  githubLink: string;
+}
+
 interface ProjectInfoModalProps {
   showModal: boolean;
   closeProjectModal: () => void;
-  projectInfo: {
-    title: string;
-    description: string;
-    builtWith: string;
-    liveLink?: string;
-    videoLink?: string;
-    githubLink: string;
-  };
+  projectInfo: ProjectInfo;
 }
 
 const ProjectInfoModal = ({ showModal, closeProjectModal, projectInfo }: ProjectInfoModalProps) => {
@@ -49,7 +51,7 @@ const ProjectInfoModal = ({ showModal, closeProjectModal, projectInfo }: Project
               rel="noreferrer"
               tabIndex={0}
             >
-              Video Link
+              Video Demo
             </a>
           )}
           <a className={styles.linkBtn} href={projectInfo.githubLink} target="_blank" rel="noreferrer" tabIndex={0}>
