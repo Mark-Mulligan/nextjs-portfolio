@@ -97,7 +97,7 @@ const ProjectSection = () => {
           description="Full Stack"
           panelType="topRightPanel"
           aosData="fade-left"
-          handleProjectClick={() => handleProjectClick(1)}
+          handleProjectClick={() => handleProjectClick(2)}
         />
 
         <ProjectPanel
