@@ -18,7 +18,7 @@ const projectInfo: ProjectInfo[] = [
     title: 'US Housing Data',
     description: `I built this application to allow me to track the United State's housing market. The charts quickly allow you to look at trends in the housing market based on historical data gathered from the last five years.  The data was provided by relator.com`,
     builtWith: 'Next.js, Typescript, Tailwind, Recharts',
-    liveLink: 'https://us-housing-data-report.vercel.app/',
+    liveLink: 'https://us-housing-data.vercel.app/',
     githubLink: 'https://github.com/Mark-Mulligan/us-housing-data-v2',
   },
   {
