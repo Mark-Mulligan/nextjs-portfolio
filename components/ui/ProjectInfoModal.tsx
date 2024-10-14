@@ -1,4 +1,4 @@
-import styles from '../../styles/ProjectInfoModal.module.scss';
+import styles from "../../styles/ProjectInfoModal.module.scss";
 
 export interface ProjectInfo {
   title: string;
@@ -6,7 +6,7 @@ export interface ProjectInfo {
   builtWith: string;
   liveLink?: string;
   videoLink?: string;
-  githubLink: string;
+  githubLink?: string;
 }
 
 interface ProjectInfoModalProps {
@@ -15,7 +15,11 @@ interface ProjectInfoModalProps {
   projectInfo: ProjectInfo;
 }
 
-const ProjectInfoModal = ({ showModal, closeProjectModal, projectInfo }: ProjectInfoModalProps) => {
+const ProjectInfoModal = ({
+  showModal,
+  closeProjectModal,
+  projectInfo,
+}: ProjectInfoModalProps) => {
   return (
     <div className={`${styles.modalBackground} ${!showModal && styles.hide}`}>
       <div className={styles.modal}>
@@ -54,9 +58,22 @@ const ProjectInfoModal = ({ showModal, closeProjectModal, projectInfo }: Project
               Video Demo
             </a>
           )}
-          <a className={styles.linkBtn} href={projectInfo.githubLink} target="_blank" rel="noreferrer" tabIndex={0}>
-            Github
-          </a>
+          {projectInfo.githubLink && (
+            <a
+              className={styles.linkBtn}
+              href={projectInfo.githubLink}
+              target="_blank"
+              rel="noreferrer"
+              tabIndex={0}
+            >
+              Github
+            </a>
+          )}
+          {!projectInfo.githubLink && (
+            <div className={`${styles.linkBtn} ${styles.mr10}`}>
+              Private Repo (No github link available)
+            </div>
+          )}
         </div>
       </div>
     </div>
